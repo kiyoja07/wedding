@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: #FFFFFF;
+    color: #666;
+    font-family: 'Jua', sans-serif;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    transition: top 0.5s;
+    display: table;
+    width: 100%;
+    height: 10vh;
+    background: #f07677;
+    z-index: 3;
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, .2);
+    margin: 0 auto;
+}
+
+.headerLogo {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo {
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 1.1px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 0 0 5vw;
+}
+
+.scrollHeader {
+    transition: top 1s;
+}
+
+/* MAIN */
+
+.mainContainer {
+    background-image: url("image/hangang.jpg");
+    height: 110vw;
+    max-height: 640px;
+    max-width: 640px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+}
+
+/* NOTICE */
+
+.noticeContainer {
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.noticeWho {
+    width: 100%;
+    display: table;
+}
+
+.male, .female {
+    color: #000000;
+    font-size: 20px;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.male {
+    text-align: right;
+    padding-right: 10px;
+    width: 45%;
+}
+
+.female {
+    text-align: left;
+    padding-left: 10px;
+    width: 45%;
+}
+
+
+.heartContainer {
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.heart {
+    background-color: #f07677;
+    height: 20px;
+    transform: rotate(-45deg);
+    width: 20px;
+    margin: auto;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #f07677;
+  border-radius: 50%;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.vertical {
+    height: 1rem;
+    border-left: 2px solid #DCDCDC;
+    position: absolute;
+    left: 50%;
+    margin: 0.5rem 0 0.5rem -1px;
+}
+
+.noticeDetail {
+    margin-top: 2rem;
+}
+
+/* GREETING */
+
+.greetingContainer {
+    background: #f1f1f1;
+	color: #666;
+    text-align : center;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.greetingInner {
+    width: 80%;
+    max-width: 640px;
+    background: #f07677;
+    margin: 0 auto;
+    color: #FFFFFF;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.greetingHeader {
+    
+}
+
+.dDay {
+    padding: 1rem 0 0.5rem 0;
+}
+
+.greetingMessage {
+    margin: 0 0 0.5rem 0;
+}
+
+.greetingText {
+    background: #FFFFFF;
+    color: #666;
+    margin: 0 auto;
+    padding: 1em 0;
+    font-size: 0.7rem;
+    max-width: 640px;
+}
+
+/* SLIDESHOW */
+
+.slideshow {
+    background-color: #FFFFFF;
+}
+
+.slideshowContainer {
+    margin: 3vh auto 0 auto;
+    
+}
+
+.slideHeader {
+    background-color: #FFFFFF;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-weight: 600;
+    color: #f07677;
+}
+
+.slideBody {
+    position: relative;
+}
+
+.slide {
+    display: none;
+    margin: 0 auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+.slide > img { 
+    display: block;
+    height: 65vw;
+    max-height: 480px;
+    width: auto;
+    max-width: 90vw;
+    max-width: 640px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px 16px 16px 8px;
+    margin-top: -22px;
+    color: #666;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    padding: 16px 8px 16px 16px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* SLIDE DOTS */
+.dotContainer {
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 10px 2px;
+    background-color: #f07677;
+    opacity: 0.3;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #f07677;
+    opacity: 1;
+}
+  
+
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+/* GALLERY */
+
+.gallery {
+    background-color: #FFFFFF;
+    padding: 2vh 0;
+}
+
+.galleryHeader {
+    background-color: #FFFFFF;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-weight: 600;
+    color: #f07677;
+}
+
+.galleryBody > img {
+    display: block;
+    width: 90%;
+    max-width: 640px;
+    height: auto;
+    margin: 3vh auto;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* MAP */
+
+.map {
+    background-color: #FFFFFF;
+}
+
+.mapContainer {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hallMap {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+}
+
+.mapLink {
+    z-index: 2;
+    position: absolute;
+    top: 7%;
+    width: 10%;
+    max-width: 64px;
+
+    left: 4%;
+    background-color: #FFFFFF;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+.mapLink > a {
+    display: block;
+    color: #666;
+}
+
+.naverMap {
+    margin: 0;
+    width: 100%
+}
+
+.naverMapText {
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    z-index: 2;
+    margin: 0;
+}
+
+.mapInfo {
+    margin: 10px 0 0 5px;
+}
+
+.mapInfo > p:first-child {
+    border-bottom: 2px solid #666;
+    display: inline;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #f07677;
+    width: 100%;
+}
+
+.footerContainer {
+    padding: 3vh 3vw;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.fa-heart,
+.footerWhoBody,
+.fa-clock, 
+.footerWhenBody,
+.fa-map-marker-alt,
+.footerWhereBody {
+    font-size: 14px;
+    color:#FFFFFF;
+    display: inline-block;
+}
+
+.footerThanks p{
+    border-top: 1px solid #FFFFFF;
+    margin-top: 1em;
+    padding-top: 1em;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+/* BUTTON */
+
+.topBtn {
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; 
+    outline: none; 
+    background-color: #f07677;
+    color: #FFFFFF; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; 
+    border-radius: 10px; /* Rounded corners */
+    font-size: 9px;
+    opacity: 0.5;
+}
+
+.topBtnBlock {
+    display: block;  
+}
