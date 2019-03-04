@@ -18,7 +18,6 @@ function displayResult(gapDay) {
 function dayCalculator() {
     const gapTime = dDay.getTime() - now.getTime();
     const gapDay = Math.floor(gapTime / (1000 * 60 * 60 * 24)) + 1;
-    console.log(gapDay)
     displayResult(gapDay);
 }
 

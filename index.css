@@ -49,10 +49,15 @@ a:link, a:visited, a:active, a:hover {
 /* MAIN */
 
 .mainContainer {
-    background-image: url("image/hangang.jpg");
-    height: 110vw;
-    max-height: 640px;
     max-width: 640px;
+    margin: 0 auto;
+    background-position: center;
+    align-content: center;
+}
+
+.bgImage {
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -271,7 +276,6 @@ a:link, a:visited, a:active, a:hover {
 }
   
 
-
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
@@ -289,13 +293,6 @@ a:link, a:visited, a:active, a:hover {
     from {opacity: .4} 
     to {opacity: 1}
 }
-
-
-
-
-
-
-
 
 
 /* GALLERY */
