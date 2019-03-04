@@ -197,6 +197,9 @@ a:link, a:visited, a:active, a:hover {
 
 .slideBody {
     position: relative;
+    max-width: 90vw;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .slide {
@@ -212,7 +215,7 @@ a:link, a:visited, a:active, a:hover {
     max-height: 480px;
     width: auto;
     max-width: 90vw;
-    max-width: 640px;
+    max-width: 576px; /* 640px * 0.9 */
     margin: 0 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -222,8 +225,10 @@ a:link, a:visited, a:active, a:hover {
     position: absolute;
     top: 40%;
     width: auto;
+    max-width: 90vw;
+    max-width: 640px;
     padding: 16px 16px 16px 8px;
-    margin-top: -22px;
+    margin: -22px auto 0 auto;
     color: #666;
     font-weight: bold;
     font-size: 18px;
@@ -367,15 +372,14 @@ a:link, a:visited, a:active, a:hover {
     margin: 0;
 }
 
-.mapInfo {
+.mapInfo, .busInfo {
     margin: 10px 0 0 5px;
 }
 
-.mapInfo > p:first-child {
+.mapInfo > p:first-child, .busInfo > p:first-child {
     border-bottom: 2px solid #666;
     display: inline;
 }
-
 
 /* FOOTER */
 
