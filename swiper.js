@@ -1,11 +1,9 @@
-
-const slideshow = document.querySelector(".slideBody"),
-  slide = slideshow.querySelectorAll(".slide"),
-  dots = slideshow.querySelectorAll(".dot");
-
-let slideIndex = 0,
-  interval = null,
-  x0 = null;
+const slideshow = document.querySelector('.slideBody');
+const slide = slideshow.querySelectorAll('.slide');
+const dots = slideshow.querySelectorAll('.dot');
+let slideIndex = 0;
+let interval = null;
+let x0 = null;
 
 function handleBtn(input) {
   slideIndex = slideIndex + input;
@@ -25,27 +23,25 @@ function checkNum (inNum) {
   return inNum;
 }
 
-
 function showSlide(index) {
   clearTimeout(interval);
   slideIndex = checkNum(index);
   var i;
   for (i = 0; i < slide.length; i++) {
-      slide[i].style.display = "none";
+      slide[i].style.display = 'none';
   }
-  slide[slideIndex].style.display = "block";
+  slide[slideIndex].style.display = 'block';
 
   for (i = 0; i < slide.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(' active', '');
   }
-  dots[slideIndex].className += " active";
+  dots[slideIndex].className += ' active';
   interval = setTimeout(auto, 3000);
 }
 
 function auto() {
   handleBtn(1);
 }
-
 
 function unify(e) {
   return e.changedTouches ? e.changedTouches[0] : e

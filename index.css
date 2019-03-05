@@ -46,7 +46,7 @@ a:link, a:visited, a:active, a:hover {
     transition: top 1s;
 }
 
-/* MAIN */
+/* MAIN IMAGE */
 
 .mainContainer {
     max-width: 640px;
@@ -97,7 +97,6 @@ a:link, a:visited, a:active, a:hover {
     padding-left: 10px;
     width: 45%;
 }
-
 
 .heartContainer {
     margin: 0;
@@ -411,7 +410,7 @@ a:link, a:visited, a:active, a:hover {
     font-size: 16px;
 }
 
-/* BUTTON */
+/* TOP BUTTON */
 
 .topBtn {
     display: none;

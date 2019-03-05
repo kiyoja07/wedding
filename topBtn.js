@@ -1,15 +1,15 @@
-const topBtn = document.querySelector(".topBtn");
-
+const topBtn = document.querySelector('.topBtn');
 let prevYAxis = window.pageYOffset;  // 브라우저 좌상단에서 스크롤된 픽셀
 
 function scrollHandler(event) {
   let yScroll = window.pageYOffset;
+
   if (yScroll >= prevYAxis) {
-    topBtn.classList.remove("topBtnBlock");
-    topBtn.classList.add("topBtnNone");
+    topBtn.classList.remove('topBtnBlock');
+    topBtn.classList.add('topBtnNone');
   } else {
-    topBtn.classList.remove("topBtnNone");
-    topBtn.classList.add("topBtnBlock");
+    topBtn.classList.remove('topBtnNone');
+    topBtn.classList.add('topBtnBlock');
     onClick();
   }
   prevYAxis = yScroll;
@@ -21,11 +21,11 @@ function goToTop(event) {
 }
 
 function onClick() {
-  topBtn.addEventListener("click", goToTop);
+  topBtn.addEventListener('click', goToTop);
 }
 
 function onScroll() {
-  window.addEventListener("scroll", scrollHandler);
+  window.addEventListener('scroll', scrollHandler);
 }
 
 function init() {

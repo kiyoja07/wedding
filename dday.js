@@ -1,6 +1,5 @@
-
-const Day = document.querySelector(".dDay");
-const dDay = new Date("2019-06-15");
+const Day = document.querySelector('.dDay');
+const dDay = new Date('2019-06-15');
 const now = new Date(); 
 
 function displayResult(gapDay) {
