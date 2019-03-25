@@ -159,10 +159,6 @@ a:link, a:visited, a:active, a:hover {
     box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.greetingHeader {
-    
-}
-
 .dDay {
     padding: 1rem 0 0.5rem 0;
 }
@@ -344,7 +340,6 @@ a:link, a:visited, a:active, a:hover {
     top: 7%;
     width: 10%;
     max-width: 64px;
-
     left: 4%;
     background-color: #FFFFFF;
     box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.8);
@@ -368,12 +363,15 @@ a:link, a:visited, a:active, a:hover {
     margin: 0;
 }
 
-.mapInfo, .busInfo {
-    margin: 10px 0 0 5px;
+.mapInfo {
+    background-color: #332D21;
+    color: #FFFFFF;
+    padding: 0 30px 3vh 30px;
+    font-size: 12px;
 }
 
-.mapInfo > p:first-child, .busInfo > p:first-child {
-    border-bottom: 2px solid #666;
+.mapInfo > p:first-child {
+    border-bottom: 2px solid #FFFFFF;
     display: inline;
 }
 
@@ -423,9 +421,9 @@ a:link, a:visited, a:active, a:hover {
     background-color: #f07677;
     color: #FFFFFF; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 10px; 
-    border-radius: 10px; /* Rounded corners */
-    font-size: 9px;
+    padding: 12px; 
+    border-radius: 12px; /* Rounded corners */
+    font-size: 10px;
     opacity: 0.5;
 }
 

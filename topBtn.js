@@ -5,11 +5,11 @@ function scrollHandler(event) {
   let yScroll = window.pageYOffset;
 
   if (yScroll >= prevYAxis) {
-    topBtn.classList.remove('topBtnBlock');
-    topBtn.classList.add('topBtnNone');
-  } else {
     topBtn.classList.remove('topBtnNone');
     topBtn.classList.add('topBtnBlock');
+  } else {
+    topBtn.classList.remove('topBtnBlock');
+    topBtn.classList.add('topBtnNone');
     onClick();
   }
   prevYAxis = yScroll;
