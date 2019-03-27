@@ -4,24 +4,41 @@ let prevYAxis = window.pageYOffset;  // 브라우저 좌상단에서 스크롤�
 function scrollHandler(event) {
   let yScroll = window.pageYOffset;
 
-  if (yScroll >= prevYAxis) {
+  console.log(yScroll);
+
+  if (yScroll >= 1800) {
     topBtn.classList.remove('topBtnNone');
     topBtn.classList.add('topBtnBlock');
   } else {
-    topBtn.classList.remove('topBtnBlock');
-    topBtn.classList.add('topBtnNone');
-    onClick();
+
+    if (yScroll >= prevYAxis) {  // 아래로 스크롤되면 버튼 활성화
+      topBtn.classList.remove('topBtnNone');
+      topBtn.classList.add('topBtnBlock');
+    } else { // 위로 스크롤되면 버튼 비활성화
+      topBtn.classList.remove('topBtnBlock');
+      topBtn.classList.add('topBtnNone');
+      onClick();
+    }
+    
   }
   prevYAxis = yScroll;
 }
 
-function goToTop(event) {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+function scrollToTop(event) {
+  // returns the number of pixels an element's content is scrolled vertically
+  // document.body.scrollTop : For Safari
+  // document.documentElement.scrollTop : For Chrome, Firefox, IE and Opera
+  
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
 }
 
 function onClick() {
-  topBtn.addEventListener('click', goToTop);
+  topBtn.addEventListener('click', scrollToTop);
 }
 
 function onScroll() {
@@ -30,6 +47,7 @@ function onScroll() {
 
 function init() {
   onScroll();
+  onClick();
 }
 
 init();

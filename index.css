@@ -39,8 +39,12 @@ a:link, a:visited, a:active, a:hover {
     letter-spacing: 1.1px;
     color: #FFFFFF;
     text-decoration: none;
-    margin: 0 0 0 5vw;
+    margin: 0 0 0 5vw;   
 }
+
+.logo:hover {
+    cursor:pointer;
+   }
 
 .scrollHeader {
     transition: top 1s;
