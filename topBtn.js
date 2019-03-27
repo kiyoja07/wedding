@@ -4,8 +4,6 @@ let prevYAxis = window.pageYOffset;  // 브라우저 좌상단에서 스크롤�
 function scrollHandler(event) {
   let yScroll = window.pageYOffset;
 
-  console.log(yScroll);
-
   if (yScroll >= 1800) {
     topBtn.classList.remove('topBtnNone');
     topBtn.classList.add('topBtnBlock');
@@ -31,9 +29,11 @@ function scrollToTop(event) {
   
   const c = document.documentElement.scrollTop || document.body.scrollTop;
 
-  if (c > 0) {
+  if (c > 10) {
     window.requestAnimationFrame(scrollToTop);
     window.scrollTo(0, c - c / 10);
+  } else {
+    window.scrollTo(0, 10);
   }
 }
 

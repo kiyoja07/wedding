@@ -176,8 +176,9 @@ a:link, a:visited, a:active, a:hover {
     color: #666;
     margin: 0 auto;
     padding: 1em 0;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     max-width: 640px;
+    line-height: 200%;
 }
 
 /* SLIDESHOW */

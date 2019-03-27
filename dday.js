@@ -1,13 +1,13 @@
 const Day = document.querySelector('.dDay');
-const dDay = new Date('2019-06-15');
+const dDay = new Date('2019-06-15T24:00:00+09:00');
 const now = new Date(); 
 
 function displayResult(gapDay) {
     const reverseResult = Math.abs(gapDay);
 
-    if (gapDay > 0) {
+    if (gapDay >= 1) {
         Day.innerText = `D - ${reverseResult}`;
-    } else if (gapDay < 0) {
+    } else if (gapDay <= -1) {
         Day.innerText = `D + ${reverseResult}`;
     } else {
         Day.innerText = `D - Day`;
@@ -16,7 +16,8 @@ function displayResult(gapDay) {
 
 function dayCalculator() {
     const gapTime = dDay.getTime() - now.getTime();
-    const gapDay = Math.floor(gapTime / (1000 * 60 * 60 * 24)) + 1;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const gapDay = Math.floor(gapTime /oneDay) ;
     displayResult(gapDay);
 }
 
