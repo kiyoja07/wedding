@@ -339,11 +339,24 @@ a:link, a:visited, a:active, a:hover {
     height: auto;
 }
 
+.mapDummy {
+    z-index: 2;
+    position: absolute;
+    top: 3%;
+    width: 30%;
+    max-width: 40vw;
+    height: 4vw;
+    right: 2%;
+    /* background-color: #FFFFFF; */
+    background-color: #342B22;
+    /* opacity: 0.5; */
+}
+
 .mapLink {
     z-index: 2;
     position: absolute;
     top: 7%;
-    width: 10%;
+    width: 14%;
     max-width: 64px;
     left: 4%;
     background-color: #FFFFFF;
@@ -361,6 +374,7 @@ a:link, a:visited, a:active, a:hover {
 }
 
 .naverMapText {
+    font-size: 0.85em;
     text-align: center;
     vertical-align: top;
     width: 100%;
@@ -371,7 +385,7 @@ a:link, a:visited, a:active, a:hover {
 .mapInfo {
     background-color: #332D21;
     color: #FFFFFF;
-    padding: 0 30px 3vh 30px;
+    padding: 3vh 3vw;
     font-size: 12px;
 }
 
