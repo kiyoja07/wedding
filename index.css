@@ -181,7 +181,9 @@ a:link, a:visited, a:active, a:hover {
     line-height: 200%;
 }
 
-/* SLIDESHOW */
+/* 
+    SLIDESHOW
+*/
 
 .slideshow {
     background-color: #FFFFFF;
@@ -189,7 +191,6 @@ a:link, a:visited, a:active, a:hover {
 
 .slideshowContainer {
     margin: 3vh auto 0 auto;
-    
 }
 
 .slideHeader {
@@ -202,7 +203,6 @@ a:link, a:visited, a:active, a:hover {
 
 .slideBody {
     position: relative;
-    max-width: 90vw;
     max-width: 640px;
     margin: 0 auto;
 }
@@ -217,10 +217,9 @@ a:link, a:visited, a:active, a:hover {
 .slide > img { 
     display: block;
     height: 65vw;
-    max-height: 480px;
+    max-height: 427px;
     width: auto;
-    max-width: 90vw;
-    max-width: 576px; /* 640px * 0.9 */
+    max-width: 640px;
     margin: 0 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -230,7 +229,6 @@ a:link, a:visited, a:active, a:hover {
     position: absolute;
     top: 40%;
     width: auto;
-    max-width: 90vw;
     max-width: 640px;
     padding: 16px 16px 16px 8px;
     margin: -22px auto 0 auto;
@@ -275,8 +273,7 @@ a:link, a:visited, a:active, a:hover {
     opacity: 1;
 }
   
-
-/* Fading animation */
+/* slide fading animation */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -295,14 +292,17 @@ a:link, a:visited, a:active, a:hover {
 }
 
 
-/* GALLERY */
+/* 
+    GALLERY
+*/
 
 .gallery {
     background-color: #FFFFFF;
-    padding: 2vh 0;
+    padding: 0 0 2vh 0;
 }
 
-.galleryHeader {
+.galleryHeader, .galleryBody > h1 {
+    padding-top: 2vh;
     background-color: #FFFFFF;
     text-align: center;
     font-family: 'Satisfy', cursive;
@@ -319,7 +319,9 @@ a:link, a:visited, a:active, a:hover {
     box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* MAP */
+/*
+    MAP
+*/
 
 .map {
     background-color: #FFFFFF;
@@ -347,9 +349,7 @@ a:link, a:visited, a:active, a:hover {
     max-width: 40vw;
     height: 4vw;
     right: 2%;
-    /* background-color: #FFFFFF; */
     background-color: #342B22;
-    /* opacity: 0.5; */
 }
 
 .mapLink {
@@ -385,13 +385,18 @@ a:link, a:visited, a:active, a:hover {
 .mapInfo {
     background-color: #332D21;
     color: #FFFFFF;
-    padding: 3vh 3vw;
+    padding: 2vh 3vw;
     font-size: 12px;
 }
 
-.mapInfo > p:first-child {
-    border-bottom: 2px solid #FFFFFF;
-    display: inline;
+.mapInfo > ul {
+    padding-left: 3vw;
+}
+
+.fas, .far {
+    font-size: 14px;
+    color:#FFFFFF;
+    display: inline-block;
 }
 
 /* FOOTER */
@@ -407,11 +412,8 @@ a:link, a:visited, a:active, a:hover {
     margin: 0 auto;
 }
 
-.fa-heart,
 .footerWhoBody,
-.fa-clock, 
 .footerWhenBody,
-.fa-map-marker-alt,
 .footerWhereBody {
     font-size: 14px;
     color:#FFFFFF;
@@ -434,11 +436,11 @@ a:link, a:visited, a:active, a:hover {
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
     right: 15px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
+    z-index: 3; /* Make sure it does not overlap */
     border: none; 
     outline: none; 
     background-color: #f07677;
-    color: #FFFFFF; /* Text color */
+    color: #FFFFFF;
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 12px; 
     border-radius: 12px; /* Rounded corners */
@@ -448,4 +450,79 @@ a:link, a:visited, a:active, a:hover {
 
 .topBtnBlock {
     display: block;  
+}
+
+/*
+    MODAL IMAGES
+*/
+
+/* Style the Image Used to Trigger the Modal */
+.galleryImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}  
+
+.galleryImg:hover {
+    opacity: 0.8;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 96%;
+    max-width: 640px;
+}
+
+
+/* Add Animation - Zoom in the Modal */
+.modal-content { 
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 640px){
+    .modal-content {
+        width: 100%;
+    }
 }

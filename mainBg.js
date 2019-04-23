@@ -1,5 +1,5 @@
 const mainBg = document.querySelector('.mainContainer');
-const img_list = ['baseball.jpg', 'hanbok.jpg'];
+const img_list = ['PCSK_0134.jpg'];
 
 function paintImage(img_number) {
     const image = new Image(); // returns the value of the src attribute of an image.

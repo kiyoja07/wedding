@@ -109,19 +109,19 @@
         <div class="slideshowContainer">
           <div class="slideHeader">
             <h1>
-                Elegant Moments
+                Wedding Gallery
             </h1>
           </div>
           <!-- image -->
           <div class="slideBody">
             <div class="slide fade">
-                <img src="image/hangang.jpg" alt="Elegant Moments">
+                <img src="image/P1CSK_0318.jpg" alt="Elegant Moments">
             </div>
             <div class="slide fade">
-                <img src="image/baseball.jpg" alt="Elegant Moments">
+                <img src="image/CSK_0675.jpg" alt="Elegant Moments">
             </div>
                 <div class="slide fade">
-              <img src="image/hanbok.jpg" alt="Elegant Moments">
+              <img src="image/hands_1200*800.jpg" alt="Elegant Moments">
             </div>
       
             <!-- 좌우 슬라이드 버튼 -->
@@ -143,13 +143,32 @@
             <div class="galleryInner">
                 <div class="galleryHeader">
                     <h1>
-                        Wedding Gallery
+                        Elegant Moments
                     </h1>
                 </div>
                 <div class="galleryBody">
-                    <img src="image/hangang.jpg" alt="wedding gallery">
-                    <img src="image/baseball.jpg" alt="wedding gallery">
-                    <img src="image/hanbok.jpg" alt="wedding gallery">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/PCSK_0340.jpg" alt="Elegant Moments">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/PCSK_0024.jpg" alt="Elegant Moments">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/CSK_0489_1.jpg" alt="Elegant Moments">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/PCSK_0743.jpg" alt="Elegant Moments">
+
+                     <h1>
+                        Bubbly Moments
+                    </h1>
+
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/date_1.jpg" alt="Elegant Moments">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/date_2.jpg" alt="Elegant Moments">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/date_3.jpg" alt="Elegant Moments">
+                    <img class="galleryImg" onclick="modalClick(this)" src="image/date_4.jpg" alt="Elegant Moments">
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="modaledImg">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -172,10 +191,10 @@
                 </div>
             </div>
             <div class="mapInfo">
-                <i class='fas fa-tape'></i>
-                <span>
-                    서울대 후문 톨게이트 직전에서 좌측 방향입니다
-                </span>
+                <ul>
+                    <li>서울대 후문 톨게이트 직전에서 좌측 방향입니다</li>
+                    <li>주차는 무료입니다</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -216,5 +235,6 @@
     <script src="swiper.js"></script>
     <script src="topBtn.js"></script>
     <script src="mainBg.js"></script>
+    <script src="modalimg.js"></script>
     
 </body>
