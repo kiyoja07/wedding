@@ -19,3 +19,6 @@ function modalClick(element) {
 }
 
 
+// img 태그에 onclick="modalClick(this)" 추가해야 함
+// <img class="galleryImg" onclick="modalClick(this)" src="image/PCSK_0743.jpg" alt="Elegant Moments">
+

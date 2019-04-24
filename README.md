@@ -8,3 +8,4 @@ one page wedding invitation mobile web
 - random main background images
 - image swiper
 - go to the top button
+- modal images
