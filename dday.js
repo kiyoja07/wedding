@@ -6,11 +6,11 @@ function displayResult(gapDay) {
     const reverseResult = Math.abs(gapDay);
 
     if (gapDay >= 1) {
-        Day.innerText = `D - ${reverseResult}`;
+        Day.textContent = `D\u00a0-\u00a0${reverseResult}`;
     } else if (gapDay <= -1) {
-        Day.innerText = `D + ${reverseResult}`;
+        Day.textContent = `D\u00a0+\u00a0${reverseResult}`;
     } else {
-        Day.innerText = `D - Day`;
+        Day.textContent = `D\u00a0-\u00a0Day`;
     }
 }
 
